@@ -159,12 +159,13 @@ header > a {
 }
 
 #globe, #user {
-  width: 36px;
+  width: 26px;
+  padding: 0 4px;
 }
 
 #menu {
   width: 72px;
-  padding: 0 12px;
+  padding: 0 4px;
 }
 
 
@@ -175,7 +176,9 @@ header > a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: calc(100vh - 38px);
+  height: auto;
+  width: 100vw;
+  padding-bottom: 3rem;
   background: linear-gradient(-10deg, #dff3ff 35%, rgba(237, 202, 216, 0) 75%, #ffd7e0), radial-gradient(circle, #ffcae1 0, #daeafc 100%);
 }
 
@@ -184,9 +187,8 @@ header > a {
   position: relative;
   display: flex;
   justify-content: center;
-  width: 60vw;
-  height: 55vh;
-  overflow: hidden;
+  width: 80vw;
+  height: auto;
 }
 
 
@@ -204,7 +206,7 @@ header > a {
 }
 
 .text-box h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 700;
 }
 
@@ -214,11 +216,10 @@ header > a {
 }
 
 .login-button {
-  margin: 0 auto;
   display: block;
   background: linear-gradient(rgb(254, 204, 76), rgb(255, 172, 51));
   padding: 12px 40px;
-  max-width: fit-content;
+  width: fit-content;
   font-size: 1.2rem;
   border: 3px solid #feac32;
   color: black;
@@ -250,9 +251,9 @@ header > a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width:60vw;
+  width:80vw;
   height: auto;
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 
 .companies p {
@@ -263,6 +264,7 @@ header > a {
   width: 60vw;
   display: flex;
   justify-content: space-evenly;
+  gap: 1rem;
   margin-top: 1rem;
 }
 
@@ -276,7 +278,7 @@ header > a {
 
 
 #why-learn {
-  height: 75vh;
+  height: auto;
   background-color: rgb(59, 59, 79);
   display: flex;
   flex-direction: column;
@@ -285,24 +287,24 @@ header > a {
 }
 
 .why-content {
-  height: 75vh;
+  height: auto;
   width: 100vw;
   color: var(--white-text);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4rem 0;
-}
-
-.why-content h2 {
-  margin-bottom: 3rem;
+  padding: 2rem 0;
 }
 
 .why-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 15vh);
-  gap: 2.5rem ;
+  grid-template-rows: repeat(2, 20vh);
+  justify-content: center;
+  padding: 1.5rem;
+  gap: 3rem;
+  width: 60vw;
+  height: auto;
 }
 
 #why-learn svg{
@@ -321,12 +323,14 @@ header > a {
 }
 
 .start {
+  margin: 0 auto;
   padding: 0.3rem 3.5rem;
-  margin-top: 3rem;
 }
 
 .why-box {
-  width: 27vw;
+  width: 100%;
+  height: auto;
+  justify-self: center;
 }
 
 
@@ -336,19 +340,22 @@ header > a {
 #alumni {
     padding: 4vw 15px;
     background-color: var(--alumni-background);
+    text-align: center;
 }
 
 .alumni-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 2.5rem;
     height: auto;
+    width: 100%;
     color: var(--alumni-text);
 }
 
 .student-box img {
-    height: 210px;
+    height: 100%;
     width: 210px;
 }
 
@@ -357,8 +364,9 @@ header > a {
 }
 
 .student-box {
-    width: 780px;
-    height: 210px;
+    max-width: 780px;
+    min-width: 300px;
+    flex: 1;
     background-color: white;
     display: flex;
     align-items: center;
@@ -438,7 +446,7 @@ header > a {
     width: 12px;
     height: 13px;
     position: absolute;
-    right: 1rem;
+    right: 0.5rem;
 }
 
 .curriculum:hover, .curriculum:hover *{
@@ -495,8 +503,8 @@ header > a {
 
 #footer {
     background-color:rgb(223, 223, 226);
-    height: 70vh;
-    width: 100%;
+    height: auto;
+    width: 100vw;
     color: rgb(42, 42, 64);
     position: relative;
 }
@@ -527,7 +535,7 @@ header > a {
 }
 
 .foot-container {
-    padding-top: 2rem;
+    padding: 2rem;
     display:flex;
     justify-content: center;
     height: auto;
@@ -539,9 +547,10 @@ header > a {
     color: rgb(42, 42, 64);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 0.75rem 1fr;
+    grid-template-rows: 0.75rem auto;
     text-align: left;
-    width: 35%;
+    width: auto;
+    height: fit-content;
     column-gap: 0.5rem;
     row-gap: 1rem;
 }
@@ -610,4 +619,103 @@ hr {
 .bottom-links a:hover {
     text-decoration: underline;
     text-underline-offset: 2px;
+}
+
+
+/*--------------MEDIA QUERIES--------------*/
+@media (max-width: 680px) {
+  .image {
+    display: none;
+  }
+
+  .descriptor {
+  margin-top: 3rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 80vw;
+  height: auto;
+  text-align: center;
+  }
+
+  .companies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:80vw;
+  height: auto;
+  margin-top: 0;
+  text-align: center;
+  }
+
+  .student-box {
+    max-width: 40vw;
+    flex: 1;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--alumni-secondary-text);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.why-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 20vh);
+  justify-content: center;
+  gap: 3rem;
+  width: 80vw;
+  height: auto;
+}
+}
+
+@media (max-width: 580px) {
+  .sub-h3, .student-text h3 {
+      font-size: 1rem;
+      padding-bottom: 0.7rem;
+  }
+
+  .student-text p:not(.sub-h3) {
+      font-size: 0.85rem;
+      text-align: left;
+      padding-top: 0.2rem;
+  }
+
+  .end2 {
+  padding: 0.3rem 1rem;
+  margin: 3rem auto;
+}
+
+.end3 {
+  padding: 0.3rem 1rem;
+  margin: 1rem auto;
+}
+}
+
+@media (max-width: 500px) {
+  .search-bar {
+    display: none;
+  }
+
+  .why-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 20vh);
+  justify-content: center;
+  padding: 2rem;
+  gap: 3rem;
+  width: 100vw;
+  height: auto;
+}
+
+  .why-content a {
+    display: none;
+  }
+}
+
+@media (max-width: 440px) {
+  .subtitle {
+    display: none;
+  }
 }
